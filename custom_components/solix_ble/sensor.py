@@ -1146,18 +1146,6 @@ async def async_setup_entry(
             )
         )
 
-    # Heater status
-    if type(device) in [Solarbank2]:
-        sensors.append(
-            SolixSensorEntity(
-                device,
-                "Battery Heating",
-                None,
-                "battery_heating",
-                None,
-            )
-        )
-
     # Wireless charging pad 1 power out
     if type(device) in [MagGo3in1]:
         sensors.append(
