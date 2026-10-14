@@ -13,7 +13,7 @@ from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers import entity_registry as er
 from homeassistant.helpers.device_registry import CONNECTION_BLUETOOTH, DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from SolixBLE import Solarbank2, SolixBLEDevice
+from ._vendor.SolixBLE import Solarbank2, SolixBLEDevice
 
 from .const import DOMAIN
 from .number import SCHEDULE_POWER_UNIQUE_SUFFIX

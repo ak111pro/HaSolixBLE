@@ -2,19 +2,30 @@
     "domain": "solix_ble",
     "name": "Solix BLE",
     "bluetooth": [
-      {
-        "connectable": true,
-        "service_uuid": "0000ff09-0000-1000-8000-00805f9b34fb"
-      }
+        {
+            "connectable": true,
+            "service_uuid": "0000ff09-0000-1000-8000-00805f9b34fb"
+        }
     ],
-    "codeowners": ["@flip-dots"],
+    "codeowners": [
+        "@flip-dots"
+    ],
     "config_flow": true,
-    "dependencies": ["bluetooth_adapters"],
+    "dependencies": [
+        "bluetooth_adapters"
+    ],
     "documentation": "https://github.com/flip-dots/HaSolixBLE",
     "integration_type": "device",
     "iot_class": "local_push",
     "issue_tracker": "https://github.com/flip-dots/HaSolixBLE/issues",
-    "requirements": ["SolixBLE==3.9.0"],
-    "loggers": ["bleak", "SolixBLE"],
-    "version": "3.6.0"
+    "requirements": [
+        "bleak-retry-connector",
+        "pycryptodome"
+    ],
+    "loggers": [
+        "bleak",
+        "SolixBLE",
+        "custom_components.solix_ble._vendor.SolixBLE"
+    ],
+    "version": "3.6.0+sb2ctl"
 }

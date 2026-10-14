@@ -9,7 +9,7 @@ from homeassistant.components.switch import SwitchEntity
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.device_registry import CONNECTION_BLUETOOTH, DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from SolixBLE import (
+from ._vendor.SolixBLE import (
     C300,
     C800,
     C1000,

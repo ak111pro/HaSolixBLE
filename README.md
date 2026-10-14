@@ -1,4 +1,32 @@
-# Home Assistant Solix BLE
+# Home Assistant Solix BLE — Solarbank 2 output control (fork)
+
+> [!NOTE]
+> **This is a fork** of [flip-dots/HaSolixBLE](https://github.com/flip-dots/HaSolixBLE) for one
+> purpose: controlling the output power of an Anker **Solarbank 2** over Bluetooth until this is
+> available upstream. Please use the [original integration](https://github.com/flip-dots/HaSolixBLE)
+> unless you need exactly this.
+>
+> **What it contains** (branch `sb2-control`, releases `v3.6.0-sb2ctl.N`):
+> - upstream HaSolixBLE **3.6.0**
+> - the output-power control from [HaSolixBLE PR #27](https://github.com/flip-dots/HaSolixBLE/pull/27)
+>   by [@jul1an-s](https://github.com/jul1an-s): a number *Output Power Target* and a button *Apply Power Target*
+> - the SolixBLE library **3.9.0** with [SolixBLE PR #36](https://github.com/flip-dots/SolixBLE/pull/36)
+>   (also by @jul1an-s), bundled in `custom_components/solix_ble/_vendor/` (MIT, © Harvey Lelliott) so
+>   that the library installed globally in Home Assistant is not replaced; one small change makes
+>   it importable from there (relative imports in `prime_device.py`)
+> - a brand icon
+>
+> **Tested on** a Solarbank 2 E1600 Pro with its internet access blocked: *Apply* changes the AC
+> output within about 2 seconds, both up and down. Every *Apply* writes the device's schedule, so
+> do not press it from an automation in a tight loop (seconds).
+>
+> **Install via HACS:** add `https://github.com/ak111pro/HaSolixBLE` as a custom repository
+> (category Integration) **instead of** the original one, then restart Home Assistant. Entity ids
+> are kept. When the control feature is released upstream, switch back to the original repository.
+>
+> All credit for the integration and the control feature goes to
+> [@flip-dots](https://github.com/flip-dots) and [@jul1an-s](https://github.com/jul1an-s).
+> The fork was assembled with the help of an AI assistant (Claude, by Anthropic).
 
 Home Assistant integration for monitoring and controlling Anker devices using a Bluetooth connection.
 
