@@ -27,5 +27,5 @@
         "SolixBLE",
         "custom_components.solix_ble._vendor.SolixBLE"
     ],
-    "version": "3.6.0+sb2ctl"
+    "version": "3.6.0+sb2ctl.2"
 }

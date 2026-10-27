@@ -12,7 +12,7 @@ from homeassistant.components.binary_sensor import (
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.device_registry import CONNECTION_BLUETOOTH, DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from SolixBLE import Solarbank2, SolixBLEDevice
+from ._vendor.SolixBLE import Solarbank2, SolixBLEDevice
 
 _LOGGER = logging.getLogger(__name__)
 

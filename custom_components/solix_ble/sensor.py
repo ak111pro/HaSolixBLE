@@ -28,7 +28,7 @@ from ._vendor.SolixBLE import (
     Solarbank2,
     SolixBLEDevice,
 )
-from SolixBLE.const import DEFAULT_METADATA_INT
+from ._vendor.SolixBLE.const import DEFAULT_METADATA_INT
 
 from .const import (
     CHARGING_STATUS_C300_STRINGS,

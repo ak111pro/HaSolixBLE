@@ -14,6 +14,9 @@
 >   (also by @jul1an-s), bundled in `custom_components/solix_ble/_vendor/` (MIT, © Harvey Lelliott) so
 >   that the library installed globally in Home Assistant is not replaced; one small change makes
 >   it importable from there (relative imports in `prime_device.py`)
+>  - since `v3.6.0-sb2ctl.2`: @jul1an-s's later commits for Solarbank 2 firmware 1.0.7.16+ (SOC fields
+>    `min_soc`/`active_charge_soc`/`max_soc` instead of the cutoff enums, error codes with names,
+>    heater as a binary sensor) from his branches `feature/solarbank2_control` and `sb2_improvements`
 > - a brand icon
 >
 > **Tested on** a Solarbank 2 E1600 Pro with its internet access blocked: *Apply* changes the AC

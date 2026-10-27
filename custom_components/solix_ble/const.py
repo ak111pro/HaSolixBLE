@@ -3,7 +3,7 @@
 import re
 from enum import Enum
 
-from SolixBLE.devices.solarbank2 import ErrorCodeSB2
+from ._vendor.SolixBLE.devices.solarbank2 import ErrorCodeSB2
 
 DOMAIN = "solix_ble"
 
